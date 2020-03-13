@@ -7,5 +7,7 @@ public class Concatenation {
         System.out.println(true + " or " + false);
 
         System.out.println("Vogons".repeat(3)); // Java 11
+        
     }
 }
+
