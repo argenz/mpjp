@@ -1,8 +1,15 @@
 package s029;
 
+import java.util.Arrays;
+
 public class Array {
     public static void main(String[] args) {
-        int[] array = new int[12];
+    	
+    	// inizializzare un'array 
+        int[] array = new int[12];   //crea un'array di zeri. 
+        
+        Arrays.toString(array);
+        
         array[0] = 7;
 
         System.out.println(array[0] + ", " + array[11]);
@@ -11,5 +18,7 @@ public class Array {
         System.out.println(value);
         
         // value = array[12]; // exception
+        
+      
     }
 }
