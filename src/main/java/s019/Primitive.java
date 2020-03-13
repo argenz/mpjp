@@ -5,7 +5,7 @@ public class Primitive {
         boolean flag = false;
         System.out.println(flag);
 
-        char c = 'A';
+        char c = 'c';
         System.out.println(c);
 
         byte y = 42;
@@ -26,9 +26,11 @@ public class Primitive {
         double d = 3.12e200;
         System.out.println(d);
         
-        double nan = Double.NaN;
-        double posInf = Double.POSITIVE_INFINITY;
-        double negInf = Double.NEGATIVE_INFINITY;
+        // costanti speciali per rappresentare numeri matematicamente possibili ma speciali
+        
+        double nan = Double.NaN;   //Not a number, not possible
+        double posInf = Double.POSITIVE_INFINITY;    // infinito positivo
+        double negInf = Double.NEGATIVE_INFINITY;    // infinito negativo 
         
         if(!Double.isNaN(nan) || !Double.isInfinite(posInf) || Double.isFinite(negInf)) {
             System.out.println("Unexpected");
