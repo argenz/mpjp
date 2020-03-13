@@ -8,7 +8,12 @@ public class MoreStrings {
         String t = "hello";
         System.out.println(t);
         
-        StringBuilder sb = new StringBuilder("hello");
+        StringBuilder sb = new StringBuilder("hello");   // modificabile
         System.out.println(sb);
+        
+        // changing the modifiable string
+        sb.append('y');
+        System.out.println(sb);
+        
     }
 }

@@ -6,7 +6,7 @@ public class Unary {
 
         System.out.println(value); // 1
 
-        System.out.println(++value); // 2
+        System.out.println(++value); // 2  ++ va a modificare il valore stesso
         System.out.println(--value); // 1
 
         System.out.println(value++); // 1
@@ -14,7 +14,8 @@ public class Unary {
         System.out.println(value--); // 2
         System.out.println(value); // 1
 
-        System.out.println(+value); // 1
+        System.out.println(+value); // 1    non modifica il valore in se
         System.out.println(-value); // -1
     }
 }
+
