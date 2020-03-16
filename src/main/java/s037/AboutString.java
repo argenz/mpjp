@@ -6,47 +6,79 @@ public class AboutString {
         String t = "world";
         String u = "or";
         System.out.println("s, t, u: " + s + ", " + t + ", " + u);
-
+       
         System.out.println("char at position 1 in s: " + s.charAt(1));
+        
+        // se gli si da un 'a', charAt converte 'a' in integer secondo ASCII code.
+        
+// ---------------------------------------------------------------------------     
 
-        System.out.println("s < t: " + s.compareTo(t));
-        System.out.println("t > s: " + t.compareTo(s));
+        System.out.println("s < t: " + s.compareTo(t));  //negativo
+        //same as saying 
+        System.out.println(s.charAt(0)-t.charAt(0));
+        
+        System.out.println("t > s: " + t.compareTo(s));  //positivo
+  
+// ---------------------------------------------------------------------------        
 
         System.out.println("concat s and t: " + s.concat(t));
+        
+// ---------------------------------------------------------------------------         
 
         System.out.println("t contains u? " + t.contains(u));
 
-        String u2 = t.substring(1, 3);
-        System.out.println("u2 = t.substring(1, 3): " + u2);
+// ---------------------------------------------------------------------------   
+        
+        String u2 = t.substring(1, 3);  //1 compreso, 3 escluso
+        System.out.println("u2 = t.substring(1, 3): " + u2);  
         System.out.println("t.substring(3): " + t.substring(3));
 
-        System.out.println("u equals u2? " + u.equals(u2));
-        System.out.println("u == u2? " + (u == u2));
-
+// ---------------------------------------------------------------------------       
+        
+        System.out.println("u equals u2? " + u.equals(u2)); // controlla contenuto. 
+        System.out.println("u == u2? " + (u == u2));  // controlla l'oggetto. sono nati in modo diverso, non sono references allo stesso oggetto.
+        
+// ---------------------------------------------------------------------------
+        
         System.out.println("First index of 'l' is s: " + s.indexOf('l'));
         System.out.println("Last index of 'l' is s: " + s.lastIndexOf('l'));
-        System.out.println("there is no 'x' in s: " + s.indexOf('x'));
+        System.out.println("there is no 'x' in s: " + s.indexOf('x')); // se non c'è torna -1
         System.out.println("in s \"ll\" starts at " + s.indexOf("ll"));
-        System.out.println("there is no \"lx\" in s: " + s.indexOf("lx"));
+        System.out.println("there is no \"lx\" in s: " + s.indexOf("lx")); // se non c'è torna -1
 
+// ---------------------------------------------------------------------------    
+       
         System.out.println("check if an empty string is empty: " + "".isEmpty());
-
+        
+// ---------------------------------------------------------------------------
+        
         System.out.println("s length: " + s.length());
-
-        String s2 = s.replace('l', 'q');
+        
+// ---------------------------------------------------------------------------
+        
+        String s2 = s.replace('l', 'q');  //what if i want to replace only one of them
         System.out.println("Replacing 'l' with 'q': " + s + " -> " + s2);
-
-        String[] splits = "one for me, one for you".split(" ");
+        
+// ---------------------------------------------------------------------------
+        
+        String[] splits = "one for me, one for you".split(" ");   // "  " defines what the split between the two values is
         System.out.println("Splitting: ");
         for (String token : splits) {
             System.out.println(token);
         }
+
+// ---------------------------------------------------------------------------        
+        
         String joined = String.join(" ", splits);
         System.out.println("Joining back [" + joined + "]");
+
+// ---------------------------------------------------------------------------             
 
         System.out.println("upper: " + s.toUpperCase());
         System.out.println("lower: " + "SHUT UP!".toLowerCase());
 
+// ---------------------------------------------------------------------------   
+        
         System.out.println("trim [" + " la la la ".trim() + "]");
 
         String x = null;
