@@ -17,4 +17,15 @@ public class Simple {
 
         System.out.println("Goodbye");
     }
+    
+    /// same as above, less readable. 
+    
+    void g2(boolean flag) {
+        if (flag) {
+            System.out.println("Hello");
+         
+        }else {
+        System.out.println("Goodbye");
+        }	
+    }
 }

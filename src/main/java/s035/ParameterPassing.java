@@ -18,7 +18,7 @@ public class ParameterPassing {
         Objects.requireNonNull(parameter, "Parameter should not be null");
 
         System.out.println("parameter id was " + System.identityHashCode(parameter));
-        parameter += " there";
+        parameter += " there"; 		 //new string 
         System.out.println("Now parameter id is " + System.identityHashCode(parameter));
         System.out.println("parameter value is " + parameter);
     }
@@ -32,7 +32,7 @@ public class ParameterPassing {
         // alternatively: if parameter is null throws a NullPointerException
         // Objects.requireNonNull(parameter, "Parameter should not be null");
 
-        parameter.append(" there");
+        parameter.append(" there");   //same string
         System.out.println("parameter value is " + parameter);
     }
 
@@ -56,7 +56,7 @@ public class ParameterPassing {
         String string = "Hi";
 
         System.out.println("string has been initialized to " + string);
-        immutableReference(string);
+        immutableReference(string); 
         System.out.println("string is still " + string);
 
         StringBuilder referenceValue = new StringBuilder("Hi");
@@ -68,7 +68,7 @@ public class ParameterPassing {
         int[] array = { 42 };
 
         System.out.println("array[0] is " + array[0]);
-        reference(array);
+        reference(array);  //different method than before, same name but different input, java knows. 
         System.out.println("array[0] now is " + array[0]);
     }
 }
