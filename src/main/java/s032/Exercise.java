@@ -9,16 +9,16 @@ public class Exercise {
             System.out.println(flag);
         }
 
-        for (int i = 0; i < flags.length; i++) {
-            if (!flags[i]) {
-                flags[i] = true;
-            }
-        }
-
-        System.out.println("*** Changed Values ***");
-        for (boolean flag : flags) {
-            System.out.println(flag);
-        }
+//        for (int i = 0; i < flags.length; i++) {
+//            if (!flags[i]) {      		// flags[i] == false. // flags[i] != true.
+//                flags[i] = true;
+//            }
+//        }
+//
+//        System.out.println("*** Changed Values ***");
+//        for (boolean flag : flags) {
+//            System.out.println(flag);
+//        }
 
         for (boolean flag : flags) {
             if (!flag) {
