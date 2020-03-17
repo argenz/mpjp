@@ -1,5 +1,7 @@
 package ex;
 
+//import java.util.Scanner;
+
 public class S03 {
 	/**
 	 * Check if the parameter is positive, negative, or zero
@@ -8,8 +10,16 @@ public class S03 {
 	 * @return "positive", "negative", or "zero"
 	 */
 	public static String checkSign(int value) {
-		// TODO
-		return "";
+		//Scanner input = new Scanner(System.in);
+		if (value>0) {
+			return"positive";
+		}
+		else if (value<0) {
+			return"negative";
+		}
+		else {
+			return "zero";
+		}
 	}
 
 	/**
@@ -19,8 +29,7 @@ public class S03 {
 	 * @return "odd" or "even"
 	 */
 	public static boolean isOdd(int value) {
-		// TODO
-		return false;
+		return (value%2!=0);
 	}
 
 	/**
@@ -30,8 +39,12 @@ public class S03 {
 	 * @return "zero" for 0 ... "nine" for 9, or "other"
 	 */
 	public static String asWord(int value) {
-		// TODO
-		return "";
+		String[] names = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
+		if (value >= 0 && value<=9 ) {
+			return names[value];
+		}else {
+			return "other";
+		}
 	}
 
 	/**
@@ -43,19 +56,36 @@ public class S03 {
 	 * @return a letter in [A, F]
 	 */
 	public static char vote(double percentile) {
-		// TODO
-		return 'F';
+		if(percentile<=50) {
+			return 'F';
+		}else if(percentile> 50 && percentile<=60){
+			return 'E';
+		}else if(percentile> 60 && percentile<=70) {
+			return 'D';
+		}else if(percentile> 70 && percentile<=80) {
+			return 'C';
+		}else if(percentile> 80 && percentile<=90) {
+			return 'B';
+		}else if(percentile> 90 && percentile<=100) {
+			return 'A';
+		}else {
+			return 'X';
+		}
+		
 	}
 
 	/**
 	 * Leap year checker
 	 * 
 	 * @param year
-	 * @return true if leap year
+	 * @return true if leap year  // sono divisibili per 4;
 	 */
 	public static boolean isLeapYear(int year) {
-		// TODO
-		return false;
+		if(year>0 && ((year%4==0 && year%100!=0)||(year%100==0 && year%400==0))) {
+			return true;
+		}else {
+			return false;
+		}
 	}
 
 	/**
@@ -68,9 +98,16 @@ public class S03 {
 	 */
 	public static int[] sort(int a, int b, int c) {
 		int[] result = new int[3];
-
-		// TODO
-
+		
+		result[0] =  Math.min(Math.min(a, b), Math.min(b, c));
+		result[2] =  Math.max(Math.max(a, b), Math.max(b, c));
+		
+		int[] numbers = {a, b, c};
+		for (int item : numbers){
+			if (item!=result[0] && item!=result[2]) {
+				result[1] = item;
+			}
+		}
 		return result;
 	}
 }
