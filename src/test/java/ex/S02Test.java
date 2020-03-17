@@ -13,6 +13,7 @@ class S02Test {
         double actual = S02.speed(100, 9.58);
 
         assertThat(actual, closeTo(10.438, 0.001));
+        
     }
 
     @Test
@@ -68,7 +69,7 @@ class S02Test {
     void scoreTen() {
         int actual = S02.score(0.1, -0.1);
 
-        assertThat(actual, is(6));
+        assertThat(actual, is(10));
     }
 
     @Test
