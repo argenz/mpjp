@@ -9,12 +9,12 @@ import s042.Simple;
 
 class SimpleTest {
     @Test
-    public void negatePositive() {
-        Simple simple = new Simple();
-        int value = 42;
+    public void negatePositive() {				//per eseguire il test servono:
+        Simple simple = new Simple();      		//un oggetto
+        int value = 42;							//un valore 
 
-        int result = simple.negate(value);
+        int result = simple.negate(value);		//esegui il metodo 
 
-        assertThat(result, equalTo(-42));
+        assertThat(result, equalTo(-42));		//assicurarsi che il risultato è giusto.
     }
 }
