@@ -3,7 +3,7 @@ package s037;
 public class Exercise {
     final static int GAP = 'a' - 'A';  // final? Costante  
     
-    public static void main(String[] args) {
+    public static void main(String[] args) {// scope == { ... }
         exercise("Bob");
         exercise("ciAo");
 
@@ -95,7 +95,7 @@ public class Exercise {
         for (int i = 0; i < sample.length(); i++) {
             char cur = sample.charAt(i);
             if (cur >= 'a' && cur <= 'z') {
-                System.out.print((char) (cur - GAP));  //CASTING!! per stamparlo come carattere invece di numero 
+                System.out.print((char) (cur - GAP));  //CASTING!! per salvarlo come carattere invece di numero 
             } else {
                 System.out.print(cur);
             }
