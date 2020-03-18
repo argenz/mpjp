@@ -1,6 +1,7 @@
 package ex;
 
 //import java.util.Scanner;
+//Scanner input = new Scanner(System.in);
 
 public class S03 {
 	/**
@@ -10,7 +11,7 @@ public class S03 {
 	 * @return "positive", "negative", or "zero"
 	 */
 	public static String checkSign(int value) {
-		//Scanner input = new Scanner(System.in);
+		
 		if (value>0) {
 			return"positive";
 		}
@@ -69,7 +70,7 @@ public class S03 {
 		}else if(percentile> 90 && percentile<=100) {
 			return 'A';
 		}else {
-			return 'X';
+			return '?';
 		}
 		
 	}
@@ -96,7 +97,9 @@ public class S03 {
 	 * @param c
 	 * @return a sorted array
 	 */
+	
 	public static int[] sort(int a, int b, int c) {
+		
 		int[] result = new int[3];
 		
 		result[0] =  Math.min(Math.min(a, b), Math.min(b, c));
@@ -110,4 +113,12 @@ public class S03 {
 		}
 		return result;
 	}
+	
+
+
 }
+
+
+
+
+
