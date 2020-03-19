@@ -1,5 +1,7 @@
 package ex;
 
+import ex.S05;
+
 //import java.util.Scanner;
 //Scanner input = new Scanner(System.in);
 
@@ -112,6 +114,32 @@ public class S03 {
 			}
 		}
 		return result;
+	}
+	
+	
+	//finding an index of an element in the array, useful for next method.
+	public static int indexOf(int[] array, int elem) {
+		for (int i=0; i<array.length; i++) {
+			if (array[i]==elem) {
+				return i;
+			}
+		}
+		return -1;
+	}	
+	
+	//Sorting an array
+	public static int[] sortArray(int[] array) {
+		
+		int[] result = new int[array.length];
+		
+		for (int i = array.length-1 ; i>=0; i--) {
+			int curMax = S05.max(array);
+			result[i] = curMax;
+			array[indexOf(array, curMax)] = 0;
+		
+		}
+//			
+			return result;
 	}
 	
 
