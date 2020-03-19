@@ -1,6 +1,17 @@
 package ex;
 
+import java.util.Arrays;
+
+import ex.S03;
+
 public class S08 {
+	public static void main(String[] args) {
+		int[] left = { 1, 4, 2, 3, 3, 2, 1 };
+		int[] right = { 4, 18, 7, 1 };
+		System.out.println(Arrays.toString(mergeSorted(left, right)));
+		System.out.println(getSingle(left));
+	}
+
 	/**
 	 * Binary addition on strings
 	 * 
@@ -16,6 +27,9 @@ public class S08 {
 	 */
 	public static String binarySum(String left, String right) {
 		throw new UnsupportedOperationException("Not yet implemented");
+//		int remainder = 1;
+		// while(remainder)
+
 	}
 
 	/**
@@ -31,7 +45,22 @@ public class S08 {
 	 * @return a merge of the two input parameters
 	 */
 	public static int[] mergeSorted(int[] left, int[] right) {
-		throw new UnsupportedOperationException("Not yet implemented");
+		if ((left == null || left.length == 0) || (right == null || right.length == 0)) {
+			throw new UnsupportedOperationException("Arrays cannot be null or empty.");
+		}
+
+		int totalLength = left.length + right.length;
+		int[] merged = new int[totalLength];
+		for (int i = 0; i < left.length; i++) {
+			merged[i] = left[i];
+		}
+		for (int i = 0; i < right.length; i++) {
+			merged[left.length + i] = right[i];
+		}
+		int[] sorted = S03.sortArray(merged);
+
+		return sorted;
+
 	}
 
 	/**
@@ -46,7 +75,19 @@ public class S08 {
 	 * @return the only single value
 	 */
 	public static int getSingle(int[] values) {
-		throw new UnsupportedOperationException("Not yet implemented");
+
+		for (int i = 0; i < values.length; i++) {
+			int count = 0;
+			for (int j = 0; j < values.length; j++) {  //is there a way to do it that doesnt search through all the elements? 
+				if (values[i] == values[j] && i != j) {
+					count++;
+				}
+			}
+			if (count == 0) {
+				return values[i];
+			}
+		}
+		throw new UnsupportedOperationException("All values are couples");
 	}
 
 	/**
