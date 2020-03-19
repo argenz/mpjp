@@ -1,7 +1,8 @@
 package s054;
 
 public class Dog implements BarkAndWag {
-    @Override
+	
+    @Override //anche se il metodo è implementato e non sovrascritto, si chiama override. NON HA MOLTO SENSO, ma è così. 
     public String bark() {
         return "woof!";
     }
@@ -16,8 +17,8 @@ public class Dog implements BarkAndWag {
         return sb.toString();
     }
 
-    @Override
-    public int tailWaggingSpeed() {
+    @Override //implement.  
+    public int tailWaggingSpeed(){
         return BarkAndWag.AVG_WAGGING_SPEED;
     }
 }
