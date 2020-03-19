@@ -1,7 +1,8 @@
 package s054;
 
 public class Fox implements Barker {
-    @Override //implements
+    
+	@Override //implements
     public String bark() {
         return "yap!";
     }
@@ -14,4 +15,9 @@ public class Fox implements Barker {
     //@Overload
     //serve a dichiarare il fatto che i due metodi hanno lo stesso nome ma hanno input in più o in meno; 
     //serve a diversificare il metodo. 
+    
+    @Override
+    public int a() {
+    	return 1;
+    }
 }

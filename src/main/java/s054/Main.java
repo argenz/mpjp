@@ -9,6 +9,7 @@ public class Main {
 
         for(Barker barker: barkers) {
             System.out.println(barker.bark());  // solo accesso al metodo bark() perchè è l'unico metodo implementato nell'interfaccia barker. 
+            System.out.println(barker.a());
         }
         //madre di tutte le classi si chiama Object. 
         
@@ -17,6 +18,8 @@ public class Main {
 
         Dog dog = new Dog();
         System.out.println(dog.bark(3));
+        
+        
         
     }
     void interact(Barker dog){ 		//usando un input del tipo Barker:

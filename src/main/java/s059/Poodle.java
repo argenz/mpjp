@@ -2,10 +2,11 @@ package s059;
 
 public class Poodle extends Dog {
 	private static final int DEFAULT_DENSITY = 3;
+	
 	private int curlDensity;
 	
 	public Poodle() {
-		super();
+		super();							//accedere al costruttore della classe madre
 		this.curlDensity = DEFAULT_DENSITY;
 	}
 
@@ -14,7 +15,7 @@ public class Poodle extends Dog {
 	}
 
 	public Poodle(String name, int weight) {
-		this(name, weight, DEFAULT_DENSITY);
+		this(name, weight, DEFAULT_DENSITY);    //si riferisce al costrusttore sotto. 
 	}
 
 	public Poodle(String name, int weight, int curlDensity) {

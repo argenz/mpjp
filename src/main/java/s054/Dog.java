@@ -21,4 +21,9 @@ public class Dog implements BarkAndWag {
     public int tailWaggingSpeed(){
         return BarkAndWag.AVG_WAGGING_SPEED;
     }
+    
+    @Override
+    public int a() {
+    	return 2;
+    }
 }
