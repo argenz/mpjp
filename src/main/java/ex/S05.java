@@ -2,9 +2,9 @@ package ex;
 
 public class S05 {
 	public static void main(String[] args) {
-		int[] array = {1, 2, 3};
-		System.out.println(S05.bin2dec("1001"));
-		System.out.println(S05.reverse(array));
+//		int[] array = {1, 2, 3};
+//		System.out.println(S05.bin2dec("1001"));
+//		System.out.println(S05.reverse(array));
 
 	}
 
@@ -18,7 +18,6 @@ public class S05 {
 		if (s == null || s.isEmpty()) {
 			return s;
 		}
-
 		StringBuilder reverse = new StringBuilder();
 
 		for (int i = s.length() - 1; i >= 0; i--) {
@@ -69,7 +68,7 @@ public class S05 {
 	 * @return the converted integer
 	 */
 	public static int bin2dec(String s) {
-
+		
 		int num = 0;
 		for (int i = s.length() - 1; i >= 0; i--) {
 			if (s.charAt(i) == '1') {
@@ -90,6 +89,7 @@ public class S05 {
 	 * @return a new array holding the same elements of input, in reversed order
 	 */
 	public static int[] reverse(int[] data) {
+		
 		int[] result = new int[data.length];
 		
 		for (int i = data.length - 1; i >= 0; i--) {
@@ -105,6 +105,10 @@ public class S05 {
 	 * @return the average
 	 */
 	public static double average(int[] data) {
+		if (data == null || data.length==0) {
+			return 0;
+		}
+		
 		double sum = 0;
 		for(int i=0; i<data.length; i++) {
 			sum += data[i];

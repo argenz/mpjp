@@ -79,11 +79,53 @@ class S04Test {
 
 	@Test
 	void fibonacci() {
-		fail("Not yet implemented");
+		
+		long actual = S04.fibonacci(5);
+		
+		assertThat(actual, is(5L));   
 	}
+	
+//	@Test
+//	void fibonacciZero() {
+//		
+//		long actual = S04.fibonacci(0);
+//		
+//		assertThat(actual, is(0L));   
+//	}
+
 
 	@Test
 	void multiplicationTable() {
-		fail("Not yet implemented");
+		
+		int[][] actual = S04.multiplicationTable(9);
+		
+		assertTrue(actual[0][0]==0);
+		assertTrue(actual[0][10]==90);
 	}
+	
+	@Test
+	void multiplicationTable2() {
+		final int INPUT = 3;
+		int[][] actual = S04.multiplicationTable2(INPUT);
+		
+		assertThat(actual.length, is(INPUT)); 			// checking rows 
+		assertThat(actual[0].length, is(INPUT));        // checking columns
+		assertThat(actual[1].length, is(INPUT));        // check other rows in case the matrix isn't symmetric
+		assertThat(actual[2].length, is(INPUT));
+
+		
+		
+		//assertThat(actual.)
+		
+		
+		
+		//diverso
+		int[][] expected = {{1, 2, 3},
+				            {2, 4, 6}, 
+				            {3, 6, 9}};
+		
+	    assertThat(actual, is(expected));		           
+		
+	}
+	
 }

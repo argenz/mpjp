@@ -112,14 +112,14 @@ public class S04 {
 
 	}		
 
-	public static int[][] multiplicationTable2(int value) {	
+	public static int[][] multiplicationTable2(int value){	
 		
 		// ValuexValue array
 		int[][] result = new int[value][value]; 
 		
 		for (int i=1; i<=value; i++){
 			for(int j=1; j<=value; j++){
-				result[i-1][j-1] = i*j;
+				result[i-1][j-1] = i*j;        //meglio senza zeri per memoria, indirizzabile e comprensibile 
 			}
 		}
 		return result;
