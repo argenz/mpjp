@@ -2,6 +2,7 @@ package ex;
 
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
+import static org.junit.jupiter.api.Assertions.fail;
 
 import org.junit.jupiter.api.Test;
 
@@ -69,21 +70,54 @@ class S03Test {
 
         assertThat(actual, is('B'));
     }
+    
+    @Test
+    void voteException() {
+    	
+    	
+    	try { S03.vote(-1); 
+    	} 
+    	catch (IllegalArgumentException iae) {
+    	String message = iae.getMessage();
+    	assertThat(message, is("Not a valid score!")); 
+    	return;
+    	}
+    	fail("An IllegalArgumentException was expected"); 
+    }
+   	
+ 
+
 
     @Test
-    void isLeapTrue() {
+    void isLeapTrue() throws Exception {
+    
+    	
         boolean actual = S03.isLeapYear(2020);
 
         assertThat(actual, is(true));
     }
+    
 
     @Test
-    void isLeapFalse() {
+    void isLeapFalse() throws Exception{
         boolean actual = S03.isLeapYear(1900);
 
         assertThat(actual, is(false));
     }
-
+    
+    @Test
+    void isLeapException() throws Exception{
+       
+	    try { S03.isLeapYear(10); 
+		} 
+		catch (Exception iae) {
+		String message = iae.getMessage();
+		assertThat(message, is("Leap years exist from 1588 onwards!")); 
+		return;
+		}
+		fail("An Exception was expected"); 
+    }
+    
     @Test
     void sortPlain() {
         int[] actual = S03.sort(3, 2, 1);

@@ -59,7 +59,7 @@ public class S03 {
 	 * @return a letter in [A, F]
 	 */
 	public static char vote(double percentile) {
-		if(percentile<=50) {
+		if(percentile>=0 && percentile<=50) {
 			return 'F';
 		}else if(percentile> 50 && percentile<=60){
 			return 'E';
@@ -72,7 +72,7 @@ public class S03 {
 		}else if(percentile> 90 && percentile<=100) {
 			return 'A';
 		}else {
-			return '?';
+			throw new IllegalArgumentException("Not a valid score!");
 		}
 		
 	}
@@ -82,9 +82,13 @@ public class S03 {
 	 * 
 	 * @param year
 	 * @return true if leap year  // sono divisibili per 4;
+	 * @throws Exception 
 	 */
-	public static boolean isLeapYear(int year) {
-		if(year>0 && ((year%4==0 && year%100!=0)||(year%100==0 && year%400==0))) {
+	public static boolean isLeapYear(int year) throws Exception {
+		if (year<1588) {
+			throw new Exception("Leap years exist from 1588 onwards!");
+		}
+		if((year%4==0 && year%100!=0)||(year%100==0 && year%400==0)) {
 			return true;
 		}else {
 			return false;

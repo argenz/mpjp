@@ -8,12 +8,14 @@ public class Main {
         vehicles[2] = new MotorBike();
         
         boolean rightDirection = true;
+        
         for(Vehicle vehicle : vehicles) {
             vehicle.steer(rightDirection);
             rightDirection = !rightDirection;
         }
         
-        Conditioning[] conditionings = new Conditioning[2];
+        Conditioning[] conditionings = new Conditioning[2]; //L'interfaccia serve a 
+        													//raggruppare proprietà/metodi uguali di oggetti diversi;
         conditionings[0] = new Bus();
         conditionings[1] = new Car();
         

@@ -5,11 +5,13 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.Iterator;
 
-public class AsCollection {
+public class AsCollection {                               //voglio creare una collection di interi. 
     public static void main(String[] args) {
-        Collection<Integer> coll = emptyCollection();
-
-        coll.addAll(aCollection());
+    													  //<Integer> tipo della collection. (si può mettere dentro il tipo e tutti i tipi derivati);
+			                                              //I metodi delle Collection sono metodi generici.
+    	
+        Collection<Integer> coll = emptyCollection();     //Creo una a
+        coll.addAll(aCollection());  
         System.out.println(coll);
 
         if (coll.contains(-2233)) {
@@ -39,7 +41,7 @@ public class AsCollection {
         Integer[] values = coll.toArray(new Integer[coll.size()]);
         System.out.println(Arrays.toString(values));
 
-        coll.retainAll(aCollection());
+        coll.retainAll(aCollection());              //
         System.out.println(coll);
 
         coll.clear();
@@ -47,12 +49,12 @@ public class AsCollection {
     }
 
     private static Collection<Integer> emptyCollection() {
-        Collection<Integer> result = new ArrayList<Integer>();
-
+        Collection<Integer> result = new ArrayList<Integer>();  
+                  //Casting
         return result;
     }
 
-    private static Collection<Integer> aCollection() {
+    private static Collection<Integer> aCollection() {   //
         return Arrays.asList(12, 18, -5, -2233);
     }
 }

@@ -23,8 +23,8 @@ public class Simple {
 			System.out.println("Negate " + value);
 			int x = simple.negate2(value);
 			System.out.println("My value negated is: " + x);
-		} catch (NumberFormatException e) {
-			System.out.println("Pass me an integer!");
+		} catch (NumberFormatException e) {                 //gestione dell'eccezione Checked. 
+			System.out.println("Pass me an integer!");     //serve per non far chrashare il programma
 			return;
 		} catch (MyNegateException mne) {
 			System.out.println("My value negated is close to: " + mne.getAlternativeValue());

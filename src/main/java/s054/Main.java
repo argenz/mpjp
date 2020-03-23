@@ -4,6 +4,8 @@ public class Main {
     public static void main(String[] args) {
         Barker[] barkers = new Barker[2];
         
+        //Barker oggett = new Barker();  Error!! Interface is abstract type, it cannot be instantiated. 
+        
         barkers[0] = new Fox();  //classe degli oggetti creati deve implemetare l'interfaccia del type di array.
         barkers[1] = new Dog();
 
