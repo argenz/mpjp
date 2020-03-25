@@ -24,11 +24,11 @@ public class TreeUser {
         ts2.addAll(data);
         System.out.println("A tree initialized with a comparator (same as default): " + ts2);
 
-        TreeSet<String> ts3 = new TreeSet<>(msc.reversed());
+        TreeSet<String> ts3 = new TreeSet<>(msc.reversed());  //metodo reverse nell'interfaccia comparator.
         ts3.addAll(data);
         System.out.println("A tree initialized with a reversed comparator: " + ts3);
 
-        TreeSet<String> ts4 = new TreeSet<>((s, t) -> t.compareTo(s));
+        TreeSet<String> ts4 = new TreeSet<>((s, t) -> t.compareTo(s));  //Java 8
         ts4.addAll(data);
         System.out.println("A tree initialized with a lambda comparator: " + ts4);
     }

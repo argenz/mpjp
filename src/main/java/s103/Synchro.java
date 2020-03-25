@@ -1,6 +1,14 @@
 package s103;
 
-public class Synchro {
+public class Synchro {    //problema con i thread è che se ci sono 
+						  //delle variabili universali nella classe thread, 
+						  //se i runners le sovrascrivono allo stesso momento, 
+						  //il valore inteso può essere perso, quindi la serializzazione 
+						  //è la soluzine che si usa. Ovvero si sincronizzano i thread. 
+	
+						  //la classe object ha molti metodi che permettono il multithreading, wait(), notify(), notifyAll();
+	
+	
     public static void main(String[] args) {
         Synchro syn = new Synchro();
 
