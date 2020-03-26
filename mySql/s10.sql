@@ -1,5 +1,5 @@
 -- tables in the current database
-show tables;
+show tables;    --fai un invio
 
 -- all tables
 select table_name
@@ -15,4 +15,5 @@ select * from information_schema.columns c
 where c.table_schema='me' and c.table_name = 'countries';
 
 -- user information
-select * from mysql.user;
+select *
+from mysql.user;

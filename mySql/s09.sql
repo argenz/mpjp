@@ -8,7 +8,7 @@ where region_id = 1;
 -- select all
 select * from regions;
 
-show schemas;
+show schemas;   
 
 -- select distinct
 select distinct manager_id

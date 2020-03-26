@@ -1,7 +1,7 @@
 -- that one
-select *
-from regions
-where region_id = 1;
+select *              -- righe o colonne? 
+from regions          -- table name
+where region_id = 1;  -- colonne
 
 -- the other ones
 select *
@@ -17,3 +17,8 @@ where region_id < 3;
 select *
 from regions
 where region_id <= 3;
+
+-- less or equal to
+select *
+from regions
+where region_name <= "Europe";  -- guarda l'ordine alfabetico
